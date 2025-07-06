@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">dd
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Previsão de Nível de Obesidade</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header class="main-header">
+    <img src="https://img.icons8.com/color/96/scale.png" alt="Ícone de balança" style="width:80px; height:80px; margin-top:5px;" />
+    <div>
+        <h1>Predição do Nível de Obesidade com Base no Estilo de Vida</h1>
+        <p>Preencha o formulário abaixo para descobrir seu risco de obesidade com base em hábitos alimentares, rotina e estilo de vida.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <form id="prediction-form">
+        <fieldset>
+          <legend>Dados Básicos</legend>
+
+          <label>Idade:<input type="number" name="Age" required /></label>
+          <label>Gênero:
+          <div class="radio-options">
+            <label><input type="radio" name="Gender" value="Female" required /> Feminino</label>
+            <label><input type="radio" name="Gender" value="Male" /> Masculino</label>
+          </div>
+          </label>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>Estilo de Vida</legend>
+
+          <label class="pergunta-radio">Algum membro da família sofre ou sofreu com sobrepeso?</label>
+          <div class="radio-options">
+            <label><input type="radio" name="FHWO" value="yes" required /> Sim</label>
+            <label><input type="radio" name="FHWO" value="no" /> Não</label>
+          </div>
+
+          <label class="pergunta-radio">Você consome alimentos com alto teor calórico com frequência?</label>
+          <div class="radio-options">
+            <label><input type="radio" name="FAVC" value="yes" required /> Sim</label>
+            <label><input type="radio" name="FAVC" value="no" /> Não</label>
+          </div>
+
+          <label class="pergunta-radio">Frequência com que você consome vegetais em suas refeições:</label>
+          <div class="radio-options">
+            <label><input type="radio" name="FCVC" value="1" required /> Nunca</label>
+            <label><input type="radio" name="FCVC" value="2" /> Às vezes</label>
+            <label><input type="radio" name="FCVC" value="3" /> Sempre</label>
+          </div>
+
+          <label class="pergunta-radio">Número de refeições principais realizadas por dia:</label>
+          <div class="radio-options">
+            <label><input type="radio" name="NCP" value="1" required /> Uma</label>
+            <label><input type="radio" name="NCP" value="2" required /> Duas</label>
+            <label><input type="radio" name="NCP" value="3" /> Três</label>
+            <label><input type="radio" name="NCP" value=">4" /> Quatro ou mais</label>
+          </div>
+
+          <label class="pergunta-radio">Você come algum alimento entre as refeições?</label>
+          <div class="radio-options">
+            <label><input type="radio" name="CAEC" value="no" required /> Não</label>
+            <label><input type="radio" name="CAEC" value="Sometimes" /> Às vezes</label>
+            <label><input type="radio" name="CAEC" value="Frequently" /> Frequentemente</label>
+            <label><input type="radio" name="CAEC" value="Always" /> Sempre</label>
+          </div>
+
+          <label class="pergunta-radio">Você fuma?</label>
+          <div class="radio-options">
+            <label><input type="radio" name="SMOKE" value="yes" required /> Sim</label>
+            <label><input type="radio" name="SMOKE" value="no" /> Não</label>
+          </div>
+
+          <label class="pergunta-radio">Quantidade de água ingerida por dia (aproximadamente):</label>
+          <div class="radio-options">
+            <label><input type="radio" name="CH2O" value="<1" required />  Menos que 1 litro</label>
+            <label><input type="radio" name="CH2O" value="1-2" /> Entre 1 e 2 litros</label>
+            <label><input type="radio" name="CH2O" value=">3" /> Mais de 2 litros</label>
+          </div>
+
+          <label class="pergunta-radio">Você monitora as calorias que consome diariamente?</label>
+          <div class="radio-options">
+            <label><input type="radio" name="SCC" value="yes" required /> Sim</label>
+            <label><input type="radio" name="SCC" value="no" /> Não</label>
+          </div>
+
+          <label class="pergunta-radio">Frequência semanal de prática de atividade física:</label>
+          <div class="radio-options">
+            <label><input type="radio" name="FAF" value="0" required /> Não pratico</label>
+            <label><input type="radio" name="FAF" value="1-2" /> 1 a 2 dias</label>
+            <label><input type="radio" name="FAF" value="2-4" /> 2 a 4 dias</label>
+            <label><input type="radio" name="FAF" value=">4" /> mais de 4 dias</label>
+          </div>
+
+          <label class="pergunta-radio">Tempo médio de uso diário de tecnologia (TV, computador, celular, videogame etc.):</label>
+          <div class="radio-options">
+            <label><input type="radio" name="TUE" value="0-2" required /> 0–2 horas</label>
+            <label><input type="radio" name="TUE" value="3-5" /> 3–5 horas</label>
+            <label><input type="radio" name="TUE" value=">5" /> Mais de 5 horas</label>
+          </div>
+
+          <label class="pergunta-radio">Frequência de consumo de bebidas alcoólicas:</label>
+          <div class="radio-options">
+            <label><input type="radio" name="CALC" value="no" required /> Eu não bebo</label>
+            <label><input type="radio" name="CALC" value="Sometimes" /> Às vezes</label>
+            <label><input type="radio" name="CALC" value="Frequently" /> Frequentemente</label>
+            <label><input type="radio" name="CALC" value="Always" /> Sempre</label>
+          </div>
+
+          <label class="pergunta-radio">Meio de transporte predominante utilizado:</label>
+          <div class="radio-options">
+            <label><input type="radio" name="MTRANS" value="Automobile" required /> Automóvel</label>
+            <label><input type="radio" name="MTRANS" value="Motorbike" /> Motocicleta</label>
+            <label><input type="radio" name="MTRANS" value="Bike" /> Bicicleta</label>
+            <label><input type="radio" name="MTRANS" value="Public_Transportation" /> Transporte público</label>
+            <label><input type="radio" name="MTRANS" value="Walking" /> A pé</label>
+          </div>
+        </fieldset>
+
+        <button type="submit">Enviar</button>        
+      </form>
+    </section>
+
+    <section class="tabela-section">      
+      <table id="tabela-historico">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Idade</th>
+            <th>Gênero</th>
+            <th>Família c/ Sobrepeso</th>
+            <th>Alimentos Calóricos</th>
+            <th>Vegetais</th>
+            <th>Refeições/dia</th>
+            <th>Lanches</th>
+            <th>Fuma?</th>
+            <th>Água/dia</th>
+            <th>Monitora Calorias</th>
+            <th>Atividade Física</th>
+            <th>Uso de Tela</th>
+            <th>Álcool</th>
+            <th>Transporte</th>
+            <th>Predição</th>
+            <th>X</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Projeto IA - Pós-graduação</p>
+  </footer>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>

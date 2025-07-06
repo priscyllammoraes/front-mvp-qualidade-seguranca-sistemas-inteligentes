@@ -1,0 +1,213 @@
+/* RESET BÁSICO */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+  font-size: 12px; /* ⬅️ Adicione ou reduza esse valor */
+}
+
+h1, h2 {
+  font-size: 1rem;
+}
+
+legend, button {
+  font-size: 0.80rem;
+}
+
+label,footer {
+  font-size: 0.74rem;
+}
+
+th, tbody {
+  font-size: 0.7rem;
+}
+
+
+/* CABEÇALHO 
+header.main-header {
+  background-color: #007bff;
+  color: white;
+  padding: 1rem 1rem 0.5rem 1rem;
+  text-align: center;
+}
+
+.header-img {
+  max-width: 80px;
+  margin-bottom: 0.5rem;
+}*/
+
+header.main-header {
+  /*background-color: #007bff;
+  background-color: #3ad2a4ce;*/
+  background-color: #258669;  
+  color: white;
+  padding: 0.3rem;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.header-img {
+  width: 60px;
+  height: 60px;
+}
+
+/* CONTEÚDO CENTRAL */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* FORMULÁRIO */
+.form-section form {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem 1.2rem;
+  background-color: #ffffff;
+}
+
+legend {
+  grid-column: span 2;
+  font-weight: bold;
+  color: #258669;
+  margin-bottom: 0.5rem;
+}
+
+/*label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+}*/
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.1rem;  /* já deve estar pequeno */
+  line-height: 1;
+}
+
+.pergunta-radio {
+  margin-top: 0.2rem;
+  margin-bottom: 0;
+  text-align: right;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+/*.radio-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}*/
+
+.radio-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 0; /* tirar o espaço extra */
+}
+
+.radio-options label {
+  font-weight: normal;
+}
+
+button[type="submit"] {
+  grid-column: span 2;
+  background-color: #258669;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #258669;
+}
+
+#resultado {
+  grid-column: span 2;
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #e9f7ef;
+  border: 1px solid #28a745;
+  color: #155724;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* TABELA */
+.tabela-section {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.tabela-section h2 {
+  margin-bottom: 1rem;
+  color: #007bff;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+th, td {
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+th {
+  background-color: #258669;
+  color: white;
+  font-weight: bold;
+}
+
+/* RODAPÉ */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #f1f1f1;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  fieldset {
+    grid-template-columns: 1fr;
+  }
+
+  button[type="submit"],
+  #resultado {
+    grid-column: span 1;
+  }
+}
