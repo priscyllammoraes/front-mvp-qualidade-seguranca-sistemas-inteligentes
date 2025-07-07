@@ -29,3 +29,15 @@ Este repositório contém a interface web desenvolvida para o MVP da disciplina 
 ```bash
 git clone https://github.com/priscyllammoraes/front-mvp-qualidade-seguranca-sistemas-inteligentes
 cd front-mvp-qualidade-seguranca-sistemas-inteligentes
+
+
+### 2. Executar Servidor Local
+Você pode usar o Python para servir o projeto localmente:
+
+```bash
+python -m http.server 8000
+```
+
+Acesse via navegador: [http://localhost:8000](http://localhost:8000/)
+
+---
